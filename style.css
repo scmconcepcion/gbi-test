@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #1a0505; /* prevents white flash */
+}
+/* ================= HEADER ================= */
+.header {
+  background: #3a3a3a;
+  color: #fff;
+  width: 100%;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #ffcccb; /* subtle hover */
+}
+
+/* PHONE */
+.phone {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: #fff;
+
+  background: linear-gradient(
+    120deg,
+    #1a0505 0%,
+    #3a0c0c 20%,
+    #5c1414 70%
+  );
+
+  padding: 100px 20px 60px;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* COMPANY */
+.company-small {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 2px;
+}
+
+.company-name {
+  font-size: 68px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* TAGLINE */
+.tagline {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* BUTTON */
+.btn-primary {
+  display: inline-block;
+  background: #ffffff;
+  color: #5c1414;
+  padding: 12px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #f2f2f2;
+}
+
+/* ================= IMAGE ================= */
+.hero-image img {
+  width: 100%;
+  display: block;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .company-small {
+    font-size: 18px;
+  }
+
+  .company-name {
+    font-size: 36px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+  
+  .nav {
+    display: none;
+  }
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  background: #f5f5f5;
+  padding: 100px 20px;
+}
+
+.contact-inner {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* FORM */
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.contact textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* BUTTON (wine color) */
+.contact button {
+  background: #5c1414;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: #3a0c0c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
