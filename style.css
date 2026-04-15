@@ -10,7 +10,7 @@ html, body {
 }
 /* ================= HEADER ================= */
 .header {
-  background: #3a3a3a;
+  background: #5c1414; /* wine red */
   color: #fff;
   width: 100%;
 }
@@ -19,9 +19,15 @@ html, body {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+/* LOGO */
+.logo img {
+  height: 45px;
+  display: block;
 }
 
 /* NAV */
@@ -34,34 +40,65 @@ html, body {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
   transition: 0.3s;
 }
 
 .nav a:hover {
-  color: #ffcccb; /* subtle hover */
+  color: #ffcccb;
 }
 
 /* PHONE */
 .phone {
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: 300;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* ================= HERO ================= */
-.hero {
-  min-height: 100vh;
-
+/* LOGO WRAP (logo + text clickable) */
+.logo-wrap {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
 
-  text-align: center;
+/* Logo */
+.logo-wrap img {
+  height: 45px;
+}
+
+/* Company text beside logo */
+.company-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+/* Small text */
+.company-small-header {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Main company name */
+.company-name-header {
+  font-size: 16px;
+  font-weight: 600;
   color: #fff;
+}
+
+/* Hover effect */
+.logo-wrap:hover {
+  opacity: 0.85;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
 
   background: linear-gradient(
     120deg,
@@ -70,35 +107,53 @@ html, body {
     #5c1414 70%
   );
 
-  padding: 100px 20px 60px;
+  padding: 80px 20px;
 }
 
+/* Layout */
 .hero-inner {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
 }
 
-/* COMPANY */
-.company-small {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: rgba(255,255,255,0.8);
-  letter-spacing: 2px;
+/* LEFT TEXT */
+.hero-text {
+  flex: 1;
+  color: #fff;
+  text-align: center;
+  max-width: 500px;
 }
 
-.company-name {
-  font-size: 68px;
+.hero-title {
+  font-size: 45px;
   font-weight: 700;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
-/* TAGLINE */
 .tagline {
   font-size: 18px;
   line-height: 1.8;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: rgba(255,255,255,0.85);
+  opacity: 0.9;
+}
+
+/* RIGHT IMAGE */
+.hero-img {
+  flex: 1.4;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 /* BUTTON */
@@ -110,35 +165,37 @@ html, body {
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background: #f2f2f2;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 /* ================= IMAGE ================= */
-.hero-image img {
-  width: 100%;
-  display: block;
+.hero-img img {
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  .company-small {
-    font-size: 18px;
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .company-name {
-    font-size: 36px;
+  .hero-title {
+    font-size: 32px;
   }
 
-  .tagline {
-    font-size: 16px;
-  }
-  
-  .nav {
-    display: none;
+  .hero-img img {
+    margin-top: 20px;
   }
 }
 
@@ -184,6 +241,7 @@ html, body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-size:14px;
   transition: 0.3s;
 }
 
