@@ -103,7 +103,7 @@ html, body {
   background: linear-gradient(
     120deg,
     #1a0505 0%,
-    #3a0c0c 20%,
+    #3a0c0c 25%,
     #5c1414 70%
   );
 
@@ -251,4 +251,136 @@ html, body {
 
 html {
   scroll-behavior: smooth;
+}
+@charset "UTF-8";
+/*================================================
+ *  フットメニュー
+ ================================================*/
+#footMenu {
+	/*clear:both;*/
+	width:940px;
+	margin:30px auto 0 auto;
+	display:flex;
+	justify-content:center;
+}
+#footMenu ul {
+	margin:5px 0;
+	padding:20px 0;
+	text-align:center;
+	border-top:1px solid #ddd;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+	align-items: center; /* 縦方向中央揃え */
+	-webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+	justify-content: center; /* 横方向中央揃え */
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+#footMenu ul *{
+	-webkit-transition: all 0.35s ease;
+	transition: all 0.35s ease;
+}
+
+#footMenu li {
+	display:inline;
+	margin:0 20px;
+	list-style:none;
+}
+
+#footMenu li a {
+	color:#fff;
+	text-decoration:none;
+}
+
+#footMenu li a:hover {
+	background-repeat:no-repeat;
+	background-position:bottom;
+	color:#fff;
+	text-decoration:none;
+	letter-spacing: 5px;
+}
+
+/*================================================
+ *  フッター
+ ================================================*/
+#footer {
+	/*clear:both;*/
+	margin:0 auto;
+	display:flex;
+	justify-content:center;
+	flex-direction: column;
+	width:100%;
+	background:#ff4500;
+}
+.copyright {
+	font-style:normal;
+	font-size:11px;
+	color:white;
+	line-height:3.0;
+	text-align:center;
+	display: flex;
+	justify-content: center;
+}
+
+/*================================================
+ *  ページトップ
+ ================================================*/
+#pageTop {
+	position:fixed;
+	right:20px;
+	bottom:20px;
+}
+
+#pageTop a {
+	display:block;
+	padding:15px 15px 15px 15px;
+	color:#fff;
+	font-size:11px;
+	text-decoration:none;
+	background:#e57a2f url("../images/bg_pagetop.gif") 30px 50% no-repeat;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+#pageTop a:hover {
+	background:#ff9449 url("../images/bg_pagetop.gif") 30px 50% no-repeat;
+}
+
+/*================================================
+ *  タブレット向けデザイン
+ ================================================*/
+/* スクロールバーを考慮して20px大きいサイズで切り替え */
+@media screen and (max-width:979px) {
+	#footer {
+		width:100%;
+		background:#ff4500;
+	}
+
+	#footMenu {
+		width:100%;
+    }   
+
+
+@media screen and (max-width:825px) {
+	#footer {
+		width:100%;
+		margin: 0 -200%; /* マージンを追記 */
+		padding: 0 200%; /* マージンで横にはみ出した部分を戻す */
+	}
+
+	#footMenu ul {
+		margin:5px 0;
+		padding:20px 0;
+		text-align:center;
+		border-top:1px solid #ddd;
+		display: flex;
+		flex-direction: column;
+	}
+
+	#footMenu li{
+		font-size:large;
+	}
 }
