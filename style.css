@@ -39,12 +39,30 @@ html, body {
 .nav a {
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px; /* space between icon + text */
+
   transition: 0.3s;
 }
 
 .nav a:hover {
   color: #ffcccb;
+}
+
+.nav i {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.nav a:hover i {
+  transform: translateY(-1px);
+}
+
+.nav i {
+  transition: 0.3s;
 }
 
 /* PHONE */
