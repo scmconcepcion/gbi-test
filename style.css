@@ -228,14 +228,14 @@ html, body {
 /* Cards */
 
 .service-card {
-  background: white;
-
+  background: rgb(219, 201, 201);
+  text-align: center;
   padding: 40px;
 
-  border-radius: 12px;
+  border-radius: 10px;
 
   box-shadow:
-    0 10px 30px rgba(0,0,0,0.08);
+    0 30px 30px rgba(61, 32, 32, 0.08);
 
   transition: 0.3s;
 }
@@ -247,7 +247,7 @@ html, body {
 /* ================= ABOUT ================= */
 
 .about {
-  background: #f7f7f7;
+  background: #e5dcdc;
   padding: 120px 20px;
 }
 
@@ -258,6 +258,7 @@ html, body {
 }
 
 .about-text {
+  text-align: center;
   font-size: 18px;
   line-height: 2;
   color: #333;
