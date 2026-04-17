@@ -5,89 +5,222 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GBI | Global Innovation Inc.</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap"
+  rel="stylesheet">
+
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
+
 <header class="header">
+
   <div class="header-inner">
 
-    <!-- LOGO + COMPANY NAME -->
+    <!-- LOGO -->
     <a href="index.html" class="logo-wrap">
+
       <img src="images/logo.png" alt="GBI Logo">
+
       <div class="company-text">
         <span class="company-small-header">株式会社</span>
-        <span class="company-name-header">グローバルイノベーション</span>
+        <span class="company-name-header">
+          グローバルイノベーション
+        </span>
       </div>
+
     </a>
 
     <!-- NAV -->
     <nav class="nav">
-  <a href="index.html"><i class="fas fa-home"></i> ホーム</a>
-  <a href="#"><i class="fas fa-building"></i> 会社について</a>
-  <a href="#"><i class="fas fa-user-tie"></i> 代表挨拶</a>
-  <a href="#"><i class="fas fa-briefcase"></i> 事業内容</a>
-  <a href="#"><i class="fas fa-users"></i> 社員の声</a>
-  <a href="#"><i class="fas fa-user-plus"></i> 採用情報</a>
-  <a href="#"><i class="fas fa-map"></i> 会社概要</a>
-  <!-- <a href="#contact"><i class="fas fa-envelope"></i> お問い合わせ</a> -->
-</nav>
+
+      <a href="index.html">
+        <i class="fas fa-home"></i> ホーム
+      </a>
+
+      <a href="about.html">
+        <i class="fas fa-building"></i> 会社について
+      </a>
+
+      <a href="greeting.html">
+        <i class="fas fa-user-tie"></i> 代表挨拶
+      </a>
+
+      <a href="#">
+        <i class="fas fa-briefcase"></i> 事業内容
+      </a>
+
+      <a href="#">
+        <i class="fas fa-users"></i> 社員の声
+      </a>
+
+      <a href="#">
+        <i class="fas fa-user-plus"></i> 採用情報
+      </a>
+
+      <a href="#">
+        <i class="fas fa-bell"></i> お知らせ
+      </a>
+
+      <a href="#">
+        <i class="fas fa-map"></i> 会社概要
+      </a>
+
+    </nav>
 
     <!-- PHONE -->
     <div class="phone">
-      <i class="fas fa-phone"></i> 098-917-5572
+      <i class="fas fa-phone"></i>
+      098-917-5572
     </div>
 
   </div>
+
 </header>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 <section class="hero">
-  <div class="hero-inner">
 
-    <!-- LEFT: TEXT -->
-    <div class="hero-text">
-      <h1 class="hero-title">
-        ITで未来を創る企業
-      </h1>
+  <img src="images/top_gbi.png" class="hero-bg">
 
-      <p class="tagline">
-        システム開発・ネットワーク構築・DX支援で<br>
-        ビジネスの成長をサポートします。
+  <div class="hero-overlay">
+    <h1 class="hero-title">
+      ITで未来を創造する。
+    </h1>
+   <p class="hero-sub">
+  ビジネスの成長を支える<br>
+  ITソリューション企業
+</p>
+<a href="#services" class="hero-btn">
+  詳しく見る
+</a>
+
+  </div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services" class="services">
+
+  <h2 class="section-title">
+    OUR SERVICES
+  </h2>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+
+      <h3>システム開発</h3>
+
+      <p>
+        業務システム・Webアプリケーションの
+        開発を行います。
       </p>
 
-      <a href="#contact" class="btn-primary">お問い合わせ</a>
     </div>
 
-    <!-- RIGHT: IMAGE -->
-    <div class="hero-img">
-      <img src="images/top_gbi.png" alt="GBI team">
+    <div class="service-card">
+
+      <h3>ネットワーク構築</h3>
+
+      <p>
+        安全で安定した
+        ネットワーク環境を構築します。
+      </p>
+
+    </div>
+
+    <div class="service-card">
+
+      <h3>DX支援</h3>
+
+      <p>
+        業務効率化と
+        デジタル化をサポートします。
+      </p>
+
     </div>
 
   </div>
+
 </section>
 
-<!-- CONTACT -->
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+  <div class="about-inner">
+
+    <h2 class="section-title">
+      ABOUT US
+    </h2>
+
+    <p class="about-text">
+
+      私たちはIT技術を通じて、
+      お客様のビジネス成長を支援する
+      ITソリューション企業です。
+
+      <br><br>
+
+      システム開発・ネットワーク構築・DX支援を通じて、
+      企業の未来を支え続けます。
+
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
 <section id="contact" class="contact">
+
   <div class="contact-inner">
+
     <h2>お問い合わせ</h2>
 
     <form>
+
       <input type="text" placeholder="会社名">
+
       <input type="email" placeholder="メール">
+
       <textarea placeholder="内容"></textarea>
-      <button type="submit">送信</button>
+
+      <button type="submit">
+
+        送信
+
+      </button>
+
     </form>
+
   </div>
+
 </section>
 
-</div><!-- /#footerMenu -->
-		<div class="copyright">Copyright &#169; 2026 株式会社グローバルイノベーションAll Rights Reserved.</div><!-- /.copyright -->
-	</div><!-- /#footer -->
+<!-- ================= FOOTER ================= -->
+
+<footer id="footer">
+
+  <div class="copyright">
+
+    Copyright &#169; 2026  
+    株式会社グローバルイノベーション  
+    All Rights Reserved.
+
+  </div>
+
+</footer>
 
 </body>
+
 </html>
