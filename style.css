@@ -69,12 +69,6 @@ html, body {
 
 /* NAV */
 
-.nav {
-
-  display: flex;
-  gap: 18px;
-}
-
 .nav a {
 
   color: #d9d0d0;
@@ -92,6 +86,7 @@ html, body {
 
   color: #ffcccb;
 }
+
 
 .has-dropdown > a::after {
   content: "▼";
@@ -149,7 +144,7 @@ html, body {
 
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
+  transform: translateY(15px);
 
   transition: 0.3s;
   z-index: 999;
@@ -159,13 +154,14 @@ html, body {
 .has-dropdown:hover .dropdown {
   opacity: 1;
   visibility: visible;
-  transform: translateY(5px);
+  transform: translateY(0);
 }
 
 /* dropdown items */
 .dropdown li {
   padding: 8px 20px;
   list-style: none;
+  font-size: 13px;
 }
 
 .dropdown a {
@@ -902,7 +898,7 @@ margin-top:15px;
 
 .action-sub{
   text-align: center;
-  font-size: 14px;
+  font-size: 10px;
   letter-spacing: 0px;
   margin-bottom: 35px;
   margin-top: 0px;
@@ -911,7 +907,7 @@ margin-top:15px;
 
 .about-text {
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 2;
   color: #333;
   margin-top: 60px;
@@ -940,7 +936,7 @@ margin-top:15px;
 /* IMAGE */
 .greeting-img img {
   width: 350px;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
@@ -981,6 +977,7 @@ margin-top:15px;
 }
 
 /* ================= PHILOSOPHY ================= */
+/* ================= PHILOSOPHY ================= */
 
 .philosophy {
   padding: 100px 20px;
@@ -989,31 +986,104 @@ margin-top:15px;
 }
 
 .philosophy-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.philosophy-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+}
+
+/* ICON */
+.philosophy-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px; /* 👈 modern (not circle) */
+
+  font-size: 22px;
+
+  /* GLASS STYLE */
+  background: rgba(92, 20, 20, 0.08);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(92, 20, 20, 0.15);
+
+  color: #5c1414;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.05);
+
+  transition: all 0.3s ease;
+}
+
+.philosophy-item:hover .philosophy-icon {
+  transform: translateY(-6px) scale(1.05);
+
+  background: rgba(92, 20, 20, 0.15);
+
+  box-shadow:
+    0 15px 35px rgba(92,20,20,0.25);
+}
+
+.philosophy-item:nth-child(2) .philosophy-icon {
+  background: rgba(120, 40, 40, 0.08);
+}
+
+.philosophy-item:nth-child(3) .philosophy-icon {
+  background: rgba(92, 20, 20, 0.12);
+}
+
+/* ================= POLICY ================= */
+
+.policy {
+  padding: 100px 20px;
+  background: #f7f7f7;
+}
+
+.policy-inner {
   max-width: 900px;
   margin: auto;
 }
 
-.philosophy-box {
-  margin-top: 50px;
-  padding: 40px;
-
-  background: #fff;
-  border-radius: 16px;
-
-  border: 2px solid rgba(92, 20, 20, 0.15);
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+.policy-block {
+  margin-bottom: 35px;
 }
 
-.philosophy-box h3 {
-  font-size: 22px;
-  color: #5c1414;
-  margin-bottom: 20px;
-}
-
-.philosophy-box p {
+.policy-block h3 {
   font-size: 14px;
-  line-height: 2;
-  color: #444;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
+  color: #333;
 }
+
+/* BOX */
+.policy-box {
+  background: #eaeaea;
+  padding: 15px 20px;
+  border-radius: 6px;
+
+  font-size: 13px;
+  line-height: 1.8;
+  color: #333;
+
+  transition: 0.2s;
+}
+
+.policy-box:hover {
+  background: #e0e0e0;
+}
+
