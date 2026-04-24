@@ -19,74 +19,60 @@ html, body {
 }
 
 .header-inner {
-
   max-width: 1200px;
   margin: auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 12px 20px;
 }
 
-/* LOGO */
+/* ================= LOGO ================= */
 
 .logo-wrap {
-
   display: flex;
   align-items: center;
   gap: 10px;
-
   text-decoration: none;
 }
 
 .logo-wrap img {
   height: 45px;
-
 }
 
-/* COMPANY TEXT */
+/* ================= COMPANY TEXT ================= */
 
 .company-text {
-
   display: flex;
   flex-direction: column;
 }
 
 .company-small-header {
-
   font-size: 12px;
   color: rgba(255,255,255,0.7);
 }
 
 .company-name-header {
-
   font-size: 16px;
   font-weight: 600;
   color: #fff;
 }
 
-/* NAV */
+/* ================= NAVIGATION ================= */
 
 .nav a {
-
   color: #d9d0d0;
   text-decoration: none;
   font-size: 12px;
-
   display: inline-block;
   align-items: center;
   gap: 5px;
-
   transition: 0.3s;
 }
 
 .nav a:hover {
-
   color: #ffcccb;
 }
-
 
 .has-dropdown > a::after {
   content: "▼";
@@ -102,7 +88,6 @@ html, body {
 }
 
 /* ================= NEW NAV MENU ================= */
-
 .nav-menu {
   list-style: none;
   display: flex;
@@ -126,7 +111,7 @@ html, body {
   color: #ffcccb;
 }
 
-/* DROPDOWN */
+/* ================= DROPDOWN ================= */
 .dropdown {
   position: absolute;
   top: 100%;
@@ -138,26 +123,23 @@ html, body {
   min-width: 200px;
   border-radius: 8px;
   padding: 10px 0;
-
   border: 1px solid rgba(255,255,255,0.15);
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(15px);
-
   transition: 0.3s;
   z-index: 999;
 }
 
-/* show on hover */
+/* ================= SHOW ON HOVER ================= */
 .has-dropdown:hover .dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* dropdown items */
+/* ================= DROPDOWN ITEMS ================= */
 .dropdown li {
   padding: 8px 20px;
   list-style: none;
@@ -183,7 +165,7 @@ html, body {
   text-decoration: none;
 }
 
-/* PHONE */
+/* ================= PHONE ================= */
 
 .phone {
   margin:0%;
@@ -194,7 +176,7 @@ html, body {
   gap: 8px;
 }
 
-/* SNS */
+/* ================= SNS ================= */
 /* container */
 .sns-follow {
   display: flex;
@@ -207,16 +189,6 @@ html, body {
 .sns-text {
   font-size: 12px;
   color: rgba(255,255,255,0.85);
-}
-
-.sns-text::after{
-  content:"";
-  position:absolute;
-  bottom:-4px;
-  left:0;
-  width:70%;
-  height:2px;
-  background:linear-gradient(90deg,#b55353,transparent);
 }
 
 /* icons */
@@ -251,7 +223,6 @@ html, body {
 }
 
 /* ================= HERO ================= */
-
 .hero {
   margin: 0;
   position: relative;
@@ -271,50 +242,35 @@ html, body {
 /* Dark Overlay */
 
 .hero-overlay {
-
   position: absolute;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 100%;
   height: 100%;
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: flex-end;
-
   align-items: center;
-
   text-align: center;
-
   color: white;
-
   padding: 0 20px;
-
   background: linear-gradient(
     rgba(0,0,0,0.2),
     rgba(0,0,0,0.4)
   );
-
 }
 
-/* Title */
-
+/* TITLE */
 .hero-title {
   font-size: 40px;
   font-weight: 700;
   margin: 0 auto 12px;
-
   letter-spacing: 2px;
   max-width: 600px;
 }
 
-/* Subtitle */
-
+/* SUBTITLE */
 .hero-sub {
   font-size: 20px;
   line-height: 1.8;
@@ -325,84 +281,68 @@ html, body {
 
 .hero-title,
 .hero-sub {
-
   text-shadow:
     0 2px 8px rgba(0,0,0,0.6);
-
 }
 
-/* Scroll indicator */
-
+/* SCROLL INDICATOR */
 .scroll-indicator {
   position: absolute;
   bottom: 40px;
-
   font-size: 14px;
-
   opacity: 0.8;
 }
 
 /* ================= SERVICES ================= */
-
 .services {
-  padding: 100px 20px;
+  padding: 50px 50px;
   background: #ffffff;
 }
 
-.section-title {
+.services-title {
   text-align: center;
   font-size: 32px;
+  margin-top: 30px;
   margin-bottom: -20px;
   letter-spacing: 2px;
 }
 
-.section-sub{
+.services-sub{
   text-align: center;
   font-size: 14px;
   letter-spacing: 0px;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   margin-top: 0px;
   color:#625c5c;
 }
 
-/* Grid */
-
+/* GRID */
 .services-grid {
   max-width: 1100px;
-
   margin: auto;
-
   display: grid;
-
- grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 40px;
 }
 
-/* Cards */
-
+/* CARDS */
 .service-card {
   background: #ffffff;
   text-align: center;
   padding: 40px 30px;
-
   border-radius: 16px;
-
   border: 2px solid rgba(92, 20, 20, 0.15);
-
   box-shadow:
     0 10px 30px rgba(0,0,0,0.05);
-
   transition: all 0.35s ease;
   position: relative;
   overflow: hidden;
+  margin-bottom: 0;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
-
-  border: 1px solid #5c1414; /* 👈 strong wine red */
-
+  border: 1px solid #5c1414; 
   box-shadow: 0 20px 50px rgba(92,20,20,0.25);
 }
 
@@ -411,7 +351,6 @@ html, body {
   content: "";
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
     120deg,
     transparent,
@@ -432,18 +371,14 @@ html, body {
   color: #5c1414;
   margin-bottom: 12px;
   transition: 0.3s;
-
   background: rgba(92,20,20,0.08);
   padding: 12px;
   border-radius: 50%;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   width: 44px;
   height: 44px;
-
   margin-bottom: 15px;
 }
 
@@ -516,100 +451,67 @@ html, body {
 */
 
 .hero {
-
   position: relative;
-
   width: 100%;
-
-  height: auto;     /* remove 100vh */
-
+  height: auto;    
 }
 
 .hero-image {
-
   width: 100%;
   height: auto;
-
   object-fit: cover;
-
   object-position: center 30%;
-
 }
 /* TAGLINE */
 
 .hero-bottom {
-
   max-width: 700px;
   margin: auto;
-
   padding: 0 20px;
   transform: translateY(-40px);
 }
 
 .tagline {
-
   font-size: 15px;
-
   line-height: 1.8;
-
   margin-bottom: 30px;
-
   color: rgba(255,255,255,0.9);
 }
 
-/* BUTTON */
-
+/* HERO BUTTON */
 .btn-primary {
-
   display: inline-block;
-
   background: #ffffff;
-
   color: #5c1414;
-
   padding: 12px 32px;
-
   border-radius: 30px;
-
   text-decoration: none;
-
   font-weight: 600;
-
   transition: 0.3s;
   margin-top: 10px;
-
 }
 
 .btn-primary:hover {
-
   transform: translateY(-2px);
-
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 /* ================= CONTACT ================= */
-
 .contact {
-
   background: #f5f5f5;
   scroll-margin-top: 100px;
-  padding: 100px 20px;
+  padding: 50px 50px;
 }
 
 .contact-inner {
-
   max-width: 500px;
   margin: auto;
-
   text-align: center;
 }
 
 .contact h2 {
-
   font-size: 32px;
-
   margin-bottom: 30px;
-
   color: #000000;
 }
 
@@ -623,58 +525,40 @@ html, body {
 }
 
 /* FORM */
-
 .contact input,
 .contact textarea {
-
   width: 100%;
-
   padding: 12px;
-
-  margin-bottom: 15px;
-
+  margin-bottom: 20px;
   border-radius: 8px;
-
   border: 1px solid #ccc;
-
   font-size: 14px;
 }
 
 .contact textarea {
-
   min-height: 120px;
-
   resize: vertical;
 }
 
 /* BUTTON */
-
 .contact button {
-
   background: #ad2222;
-
   color: #fff;
-
   padding: 12px 30px;
-
   border: none;
-
   border-radius: 20px;
-
   cursor: pointer;
-
   font-size:15px;
+  margin-bottom: 40px;
 }
 
 .contact button:hover {
-
   background: #3a0c0c;
 }
 
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
-
   .nav {
     display: none;
   }
@@ -691,38 +575,25 @@ html, body {
 /* HERO BUTTON */
 
 .hero-btn {
-
   margin-top: 10px;
   margin-bottom: 30px;
   display: inline-block;
-
   padding: 8px 30px;
-
   border: 2px solid white;
-
   color: white;
-
   text-decoration: none;
-
   font-weight: 600;
-
   letter-spacing: 1px;
-
   border-radius: 30px;
-
   transition: all 0.3s ease;
 }
 
-/* Hover effect */
+/* HOVER EFFECT*/
 
 .hero-btn:hover {
-
   background: white;
-
   color: #5c1414;
-
   transform: translateY(-2px);
-
 }
 
 html
@@ -730,7 +601,7 @@ html
   scroll-behavior:smooth;
 }
 
-/* new top to bottom*/
+/* ================= TOP TO BOTTOM SCROLL ================= */
 .scroll-circle{
   position:fixed;
   bottom:25px;
@@ -739,21 +610,17 @@ html
   height:44px;
   border-radius:50%;  
   z-index:9999;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   cursor:pointer;
-
   background:rgba(195, 128, 141, 0.7); /* dark glass */
   backdrop-filter:blur(8px);
-
   box-shadow:0 8px 20px rgba(0,0,0,0.25);
   transition: all 0.25s ease;
 }
 
-/* SVG circles */
+/* SVG CIRCLES */
 .scroll-circle svg{
   position:absolute;
   transform:rotate(-90deg);
@@ -839,12 +706,9 @@ html
   position: absolute;
   left: 0;
   bottom: -4px;
-
   width: 100%;
   height: 2px;
-
   background: #fff;
-
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -865,22 +729,21 @@ html
   transform: translateY(-2px);
 }
 
-/* Copyright text */
+/* ================= COPYRIGHT ================= */
 .copyright{
-font-size:11px;
-color:rgba(255,255,255,0.6);
-border-top:1px solid rgba(255,255,255,0.1);
-padding-top:15px;
-margin-top:15px;
+  font-size:11px;
+  color:rgba(255,255,255,0.6);
+  border-top:1px solid rgba(255,255,255,0.1);
+  padding-top:15px;
+  margin-top:15px;
 }
 
 
 /* ================= ABOUT PAGE ================= */
 
 .about {
-  background: #e5dcdc;
-  padding: 120px 20px;
-  scroll-margin-top: 100px; 
+  padding: 20px 20px 40px;
+  scroll-margin-top: 100px;
 }
 
 .about-inner {
@@ -889,16 +752,17 @@ margin-top:15px;
   text-align: center;
 }
 
-.action-title {
+.about-title {
   text-align: center;
   font-size: 32px;
   margin-bottom: -20px;
   letter-spacing: 2px;
 }
 
-.action-sub{
+.about-sub{
   text-align: center;
-  font-size: 10px;
+  font-size: 14px;
+  font-weight: bold;
   letter-spacing: 0px;
   margin-bottom: 35px;
   margin-top: 0px;
@@ -910,56 +774,90 @@ margin-top:15px;
   font-size: 15px;
   line-height: 2;
   color: #333;
-  margin-top: 60px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
-
-/* ================= GREETING ================= */
+/* ================= GREETINGS ================= */
 
 .greeting {
-  padding: 100px 20px;
+  padding: 50px 20px 60px;
   background: #f9f9f9;
   text-align: center;
+}
+
+.greeting-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: -20px;
+  letter-spacing: 2px;
+}
+
+.greeting-sub{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  margin-bottom: 35px;
+  margin-top: 0px;
+  color:#625c5c;
 }
 
 .greeting-inner {
   max-width: 1000px;
   margin: 60px auto 0;
-
+  margin: bottom;
   display: flex;
   align-items: center;
   gap: 50px;
-
   text-align: left;
 }
 
-/* IMAGE */
-.greeting-img img {
-  width: 350px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+.greeting-inner.reverse {
+  flex-direction: row-reverse;
 }
 
-/* optional depth effect */
+/* name under photo */
+.greeting-name {
+  text-align: right;
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* IMAGE */
 .greeting-img {
   position: relative;
+  width: 320px;
+}
+
+.greeting-img img {
+  width: 320px;
+  height: 380px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position:relative;
+  z-index: 1;
 }
 
 .greeting-img::before {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 18px;
   left: -20px;
-  width: 100%;
-  height: 100%;
-  background: #5c1414;
+  width: 320px;
+  height: 380px;
+  background: #772525;
   border-radius: 12px;
-  z-index: -1;
+  z-index: 0;
 }
 
 /* TEXT */
 .greeting-text {
   flex: 1;
+  align-items: center;
 }
 
 .greeting-text p {
@@ -971,71 +869,96 @@ margin-top:15px;
 
 /* SIGNATURE */
 .greeting-sign {
-  margin-top: 25px;
+  margin-top: 50px;
   font-weight: 600;
   text-align: right;
 }
 
 /* ================= PHILOSOPHY ================= */
-/* ================= PHILOSOPHY ================= */
 
 .philosophy {
-  padding: 100px 20px;
+  padding: 30px 20px;
   background: #ffffff;
   text-align: center;
+}
+
+.philosophy-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: -20px;
+  letter-spacing: 2px;
+}
+
+.philosophy-sub{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  margin-bottom: -10px;
+  margin-top: 0px;
+  color:#625c5c;
 }
 
 .philosophy-inner {
   max-width: 1100px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .philosophy-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-  margin-top: 60px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px 60px;
+  margin-top: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  row-gap: 50px;    
+  column-gap: 60px; 
 }
 
 .philosophy-item {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  align-items: center;
+  gap: 18px;
   text-align: left;
+  min-height: 70px;
 }
 
 /* ICON */
 .philosophy-icon {
   width: 60px;
   height: 60px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 18px; /* 👈 modern (not circle) */
-
-  font-size: 22px;
+  border-radius: 15px; 
+  flex-shrink: 0;
+  font-size: 20px;
 
   /* GLASS STYLE */
   background: rgba(92, 20, 20, 0.08);
   backdrop-filter: blur(10px);
-
   border: 1px solid rgba(92, 20, 20, 0.15);
-
   color: #5c1414;
-
   box-shadow:
     0 8px 20px rgba(0,0,0,0.05);
-
   transition: all 0.3s ease;
+}
+
+.philosophy-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
 }
 
 .philosophy-item:hover .philosophy-icon {
   transform: translateY(-6px) scale(1.05);
-
   background: rgba(92, 20, 20, 0.15);
-
   box-shadow:
     0 15px 35px rgba(92,20,20,0.25);
 }
@@ -1051,8 +974,25 @@ margin-top:15px;
 /* ================= POLICY ================= */
 
 .policy {
-  padding: 100px 20px;
+  padding: 30px 20px;
   background: #f7f7f7;
+}
+
+.policy-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: -20px;
+  letter-spacing: 2px;
+}
+
+.policy-sub{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  margin-bottom: 35px;
+  margin-top: 0px;
+  color:#625c5c;
 }
 
 .policy-inner {
@@ -1075,11 +1015,9 @@ margin-top:15px;
   background: #eaeaea;
   padding: 15px 20px;
   border-radius: 6px;
-
   font-size: 13px;
   line-height: 1.8;
   color: #333;
-
   transition: 0.2s;
 }
 
@@ -1087,3 +1025,17 @@ margin-top:15px;
   background: #e0e0e0;
 }
 
+/* ================= SECTION DIVIDER LINE ================= */
+
+.section-divider {
+  max-width: 1500px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(92,20,20,0.4),
+    transparent
+  );
+}
