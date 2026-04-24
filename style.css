@@ -1,1040 +1,411 @@
-/* ================= RESET ================= */
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GBI | Global Innovation Inc.</title>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-html, body {
-  font-family: 'Noto Sans JP', sans-serif;
-}
+  <link rel="stylesheet" href="style.css">
 
-/* ================= HEADER ================= */
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap"
+  rel="stylesheet">
 
-.header {
-  background: #5c1414;
-  color: #fff;
-  width: 100%;
-}
+</head>
 
-.header-inner {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-}
+<body>
 
-/* ================= LOGO ================= */
+<!-- ================= HEADER ================= -->
 
-.logo-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
+<header class="header">
 
-.logo-wrap img {
-  height: 45px;
-}
+  <div class="header-inner">
 
-/* ================= COMPANY TEXT ================= */
+    <!-- LOGO -->
+    <a href="index.html" class="logo-wrap">
 
-.company-text {
-  display: flex;
-  flex-direction: column;
-}
+      <img src="images/logo.png" alt="GBI Logo">
 
-.company-small-header {
-  font-size: 12px;
-  color: rgba(255,255,255,0.7);
-}
+      <div class="company-text">
+        <span class="company-small-header">株式会社</span>
+        <span class="company-name-header">
+          グローバルイノベーション
+        </span>
+      </div>
 
-.company-name-header {
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-}
+    </a>
 
-/* ================= NAVIGATION ================= */
+    <!-- NAV -->
+    <ul class="nav-menu">
 
-.nav a {
-  color: #d9d0d0;
-  text-decoration: none;
-  font-size: 12px;
-  display: inline-block;
-  align-items: center;
-  gap: 5px;
-  transition: 0.3s;
-}
+  <!-- 1 -->
+  <li><a href="index.html">ホーム</a></li>
 
-.nav a:hover {
-  color: #ffcccb;
-}
+  <!-- 2 -->
+  <li class="has-dropdown">
+    <a href="about.html">会社情報</a>
+    <ul class="dropdown">
+      <li><a href="#greeting">代表挨拶</a></li>
+      <li><a href="#philosophy">経営理念</a></li>
+      <li><a href="#policy">経営方針</a></li>
+    </ul>
+  </li>
 
-.has-dropdown > a::after {
-  content: "▼";
-  font-size: 10px;
-  margin-left: 5px;
-}
+  <!-- 3 -->
+  <li class="has-dropdown">
+    <a href="#">事業内容</a>
+    <ul class="dropdown">
+      <li><a href="#">サービス一覧</a></li>
+      <li><a href="#">製品情報</a></li>
+      <li><a href="#">導入事例</a></li>
+    </ul>
+  </li>
 
-.nav-menu,
-.dropdown {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  <!-- 4 -->
+  <li class="has-dropdown">
+    <a href="#">採用情報</a>
+    <ul class="dropdown">
+      <li><a href="#">社員の声</a></li>
+      <li><a href="#">フォトギャラリー</a></li>
+      <li><a href="#">募集要項</a></li>
+    </ul>
+  </li>
 
-/* ================= NEW NAV MENU ================= */
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
+  <!-- 5 -->
+  <li><a href="#">お知らせ</a></li>
 
-.nav-menu > li {
-  position: relative;
-}
+  <!-- 6 -->
+  <li class="has-dropdown">
+    <a href="#">お問い合わせ</a>
+    <ul class="dropdown">
+      <li><a href="#contact">お問い合わせフォーム</a></li>
+      <li><a href="#">アクセス</a></li>
+    </ul>
+  </li>
 
-.nav-menu > li > a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 13px;
-  padding: 8px 0;
-  display: block;
-  transition: 0.3s;
-}
+</ul>
 
-.nav-menu > li > a:hover {
-  color: #ffcccb;
-}
+    <!-- PHONE -->
+   <div class="header-contact">
 
-/* ================= DROPDOWN ================= */
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  text-decoration: none;
-  background: rgba(92, 20, 20, 0.45); /* 👈 wine red + transparency */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* safari support */
-  min-width: 200px;
-  border-radius: 8px;
-  padding: 10px 0;
-  border: 1px solid rgba(255,255,255,0.15);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(15px);
-  transition: 0.3s;
-  z-index: 999;
-}
+  <div class="phone">
+    <i class="fas fa-phone"></i>
+    098-917-5572
+  </div>
 
-/* ================= SHOW ON HOVER ================= */
-.has-dropdown:hover .dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
+  <div class="sns-follow">
+    <span class="sns-text">FOLLOW US</span>
 
-/* ================= DROPDOWN ITEMS ================= */
-.dropdown li {
-  padding: 8px 20px;
-  list-style: none;
-  font-size: 13px;
-}
+    <div class="sns-icons">
+      <a href="https://instagram.com/gbi_globalinnovation/"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com/@globalinnovation.okinawa"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </div>
 
-.dropdown a {
-  color: rgba(255,255,255,0.85);
-  font-size: 13px;
-  display: block;
-}
+</div>
 
-.dropdown a:hover {
-  color: #fff;
-  background: rgba(255,255,255,0.08);
-  text-decoration: none;
-}
+  </div>
 
-.dropdown a,
-.dropdown a:visited,
-.dropdown a:active {
-  color: rgba(255,255,255,0.9);
-  text-decoration: none;
-}
+</header>
+<!-- ================= GREETINGS ================= -->
 
-/* ================= PHONE ================= */
+<section id="greeting" class="greeting">
 
-.phone {
-  margin:0%;
-  font-size: 18px;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  gap: 8px;
-}
+  <h2 class="greeting-title">GREETINGS</h2>
+  <br>
+  <p class="greeting-sub">代表取締役挨拶</p>
 
-/* ================= SNS ================= */
-/* container */
-.sns-follow {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  gap: 10px;
-}
+  <div class="greeting-inner">
 
-/* text */
-.sns-text {
-  font-size: 12px;
-  color: rgba(255,255,255,0.85);
-}
+  <!-- PHOTO + NAME -->
+  <div class="greeting-img">
+    <img src="images/yuji_matsuda.jpg" alt="代表取締役">
 
-/* icons */
-.sns-icons {
-  display: flex;
-  gap: 12px;
-}
+    <div class="greeting-name">
+      代表取締役　松田 佑輔
+    </div>
+  </div>
 
-.sns-icons a {
-  color: rgba(255,255,255,0.8);
-  font-size: 20px;
-  transition: 0.25s;
-}
+  <!-- MESSAGE -->
+  <div class="greeting-text">
 
-.sns-icons a:hover {
-  color: #760604;
-  transform: translateY(-3px);
-  text-shadow:0 0 10px rgba(255, 124, 124, 0.6);
-}
+    <p>
+      当社は創業以来、沖縄県内外のお客様に向けて、システム開発やネットワーク構築・運用を中心に事業を展開してまいりました。<br>
+      お客様に信頼される企業であり続けることを目標に、日々努力を重ねております。
+    </p>
 
-.sns-icons a:nth-child(1):hover i{
-  background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    <p>
+      現在では、10代から40代までの幅広い世代の社員が活躍し、それぞれの強みを活かしながら事業を支えています。<br>
+      多様な人材が協力し合うことで、新たな価値を創造できると考えております。
+    </p>
 
-.sns-icons a:nth-child(2):hover i{
-  color:#fff;
-  text-shadow:
-    2px 0 #25F4EE,
-   -2px 0 #FE2C55;
-}
+    <p>
+      これまで支えてくださったお客様、そして社員一人ひとりに心より感謝申し上げます。<br>
+      今後は国内にとどまらず、海外展開も視野に入れ、より一層成長してまいります。
+    </p>
 
-/* ================= HERO ================= */
-.hero {
-  margin: 0;
-  position: relative;
-  width:100%;
-  height: 100vh;
-  overflow: hidden;
-}
+    <p>
+      これからもグローバル企業として社会に貢献できるよう、挑戦を続けてまいります。
+    </p>
 
-/* Background Image */
+</div>
 
-.hero-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+</section>
+<!-- SECOND PERSON (photo + name only) -->
+<div class="greeting-inner reverse">
 
-/* Dark Overlay */
+  <div class="greeting-img">
+    <img src="images/arika_uezu2.jpg" alt="専務取締役">
 
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 0 20px;
-  background: linear-gradient(
-    rgba(0,0,0,0.2),
-    rgba(0,0,0,0.4)
-  );
-}
+    <div class="greeting-name">
+      専務取締役　上江洲 有香
+    </div>
+  </div>
 
-/* TITLE */
-.hero-title {
-  font-size: 40px;
-  font-weight: 700;
-  margin: 0 auto 12px;
-  letter-spacing: 2px;
-  max-width: 600px;
-}
+</div>
 
-/* SUBTITLE */
-.hero-sub {
-  font-size: 20px;
-  line-height: 1.8;
-  opacity: 0.95;
-  max-width: 500px;
-  margin-bottom:10px;
-}
+  </div>
 
-.hero-title,
-.hero-sub {
-  text-shadow:
-    0 2px 8px rgba(0,0,0,0.6);
-}
+</section>
 
-/* SCROLL INDICATOR */
-.scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  font-size: 14px;
-  opacity: 0.8;
-}
+<!-- ================= ABOUT ================= -->
+<section>
+<div class="section-divider"></div>
 
-/* ================= SERVICES ================= */
-.services {
-  padding: 50px 50px;
-  background: #ffffff;
-}
+<section class="about">
 
-.services-title {
-  text-align: center;
-  font-size: 32px;
-  margin-top: 30px;
-  margin-bottom: -20px;
-  letter-spacing: 2px;
-}
+<section class="about-page">
 
-.services-sub{
-  text-align: center;
-  font-size: 14px;
-  letter-spacing: 0px;
-  margin-bottom: 40px;
-  margin-top: 0px;
-  color:#625c5c;
-}
+  <div class="about-inner">
+    <br>
+    <h2 class="about-title">ABOUT US</h2>
+    <br>
+    <p class="about-sub">グローバルイノベーションの取り組み</p>
 
-/* GRID */
-.services-grid {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-}
+    <p class="about-text">
+      株式会社グローバルイノベーションではお客様に末永く喜んでもらうことを第一に考えます。誰もが効率よく、未来に向かって躍進する事。それは私達の理想であり、理想を実現するため挑戦し続けます。システム開発でお困りの際は、ぜひ当社へご依頼ください。
+    </p>
 
-/* CARDS */
-.service-card {
-  background: #ffffff;
-  text-align: center;
-  padding: 40px 30px;
-  border-radius: 16px;
-  border: 2px solid rgba(92, 20, 20, 0.15);
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.05);
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 0;
-}
+  </div>
 
-.service-card:hover {
-  transform: translateY(-10px);
-  border: 1px solid #5c1414; 
-  box-shadow: 0 20px 50px rgba(92,20,20,0.25);
-}
+</section>
+<!-- ================= PHILOSOPHY ================= -->
+<section>
 
-/* gradient glow effect */
-.service-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(92,20,20,0.08),
-    transparent
-  );
+  <div class="section-divider"></div>
 
-  opacity: 0;
-  transition: 0.4s;
-}
+<section id="philosophy" class="philosophy">
 
-.service-card:hover::before {
-  opacity: 1;
-}
+  <div class="philosophy-inner">
 
-.service-card i {
-  font-size: 22px;
-  color: #5c1414;
-  margin-bottom: 12px;
-  transition: 0.3s;
-  background: rgba(92,20,20,0.08);
-  padding: 12px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  margin-bottom: 15px;
-}
+    <h2 class="philosophy-title">PHILOSOPHY</h2>
+    <br>
+    <p class="philosophy-sub">経営理念</p>
 
-.service-card:hover i {
-  transform: scale(1.1);
-  background: rgba(92,20,20,0.15);
-}
+    <div class="philosophy-grid">
 
-.service-card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
+      <div class="philosophy-item">
+        <div class="philosophy-icon">
+          <i class="fa-solid fa-thumbs-up"></i>
+        </div>
+        <div>
+          <h3>前向きなこと</h3>
+          <p>どんな時も前向きに仲間を信頼し、チャレンジする</p>
+        </div>
+      </div>
 
-.service-card p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
-}
+      <div class="philosophy-item">
+        <div class="philosophy-icon">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <div>
+          <h3>感謝すること</h3>
+          <p>常に感謝することを意識し、感謝の心を忘れない</p>
+        </div>
+      </div>
 
-.service-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: #5c1414;
-  transform: scaleX(0);
-  transition: 0.3s;
-}
+      <div class="philosophy-item">
+        <div class="philosophy-icon">
+          <i class="fa-solid fa-dumbbell"></i>
+        </div>
+        <div>
+          <h3>失敗を恐れないこと</h3>
+          <p>常に周囲にアンテナをはり変革し、進歩する。成功も失敗も糧に成長する</p>
+        </div>
+      </div>
 
-.service-card:hover::after {
-  transform: scaleX(1);
-}
+      <div class="philosophy-item">
+        <div class="philosophy-icon">
+          <i class="fa-solid fa-face-smile"></i>
+        </div>
+        <div>
+          <h3>元気であること</h3>
+          <p>常に笑顔で挨拶し、厳しい状況でも元気な心を忘れずに行動すること</p>
+        </div>
+      </div>
 
-/* ================= MOBILE 
+      <div class="philosophy-item">
+        <div class="philosophy-icon">
+          <i class="fa-solid fa-people-arrows"></i>
+        </div>
+        <div>
+          <h3>迅速なレスポンス</h3>
+          <p>お客様のニーズに応え、レスポンスの良い企業であり続けること</p>
+        </div>
+      </div>
 
-@media (max-width: 768px) {
+    </div>
 
-  .hero-title {
-    font-size: 32px;
+  </div>
+
+</section>
+
+<!-- ================= MANAGEMENT POLICY ================= -->
+<section>
+  <div class="section-divider"></div>
+<section id="policy" class="policy">
+
+  <div class="policy-inner">
+
+    <h2 class="policy-title">MANAGEMENT POLICY</h2>
+    <br>
+    <p class="policy-sub">株式会社グローバルイノベーション「経営方針」</p>
+
+    <div class="policy-block">
+      <h3>【 スローガン 】</h3>
+      <div class="policy-box">挑戦</div>
+    </div>
+
+    <div class="policy-block">
+      <h3>【 経営理念 】</h3>
+      <div class="policy-box">
+        挑戦し続ける事で、会社と従業員の成長につながる。
+      </div>
+    </div>
+
+    <div class="policy-block">
+      <h3>【 ビジョン 】</h3>
+      <div class="policy-box">
+        一. 新しい挑戦<br>
+        いままでの常識の枠にとらわれず、何事にもチャレンジします。<br><br>
+
+        二. 無限大への挑戦<br>
+        会社の成長は従業員の力で無限大の可能性を秘めてます。<br><br>
+
+        三. 成長と挑戦<br>
+        挑戦する事が成長につながります。
+      </div>
+    </div>
+
+    <div class="policy-block">
+      <h3>【 行動指針 】</h3>
+      <div class="policy-box">
+        一. 明るい笑顔で挨拶します。<br>
+        二. 子供心を忘れずに、正直な心で行動します。<br>
+        三. どんな時も前向きに考えます。<br>
+        四. 仲間を信頼します。<br>
+        五. コミュニケーションの促進を図ります。<br>
+        六. 感謝の気持ちを言葉で伝えます。<br>
+        七. 約束の時間を守ります。<br>
+        八. 早いレスポンスで課題や要望に応えます。<br>
+        九. 全員で助け合える職場環境を創ります。<br>
+        十. 家族・仲間・自分を大切にします。
+      </div>
+    </div>
+
+    <div class="policy-block">
+      <h3>【 社員の想い 】</h3>
+      <div class="policy-box">
+        一. 世界で通用するアプリ開発をします。<br>
+        二. 従業員が関連の良い職場環境にします。<br>
+        三. IT業界で沖縄No.1の売上高を上げます。
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= top to bottom scroll ================= -->
+<a href="#home" class="scroll-circle" id="scrollBtn">
+  <svg width="44" height="44">
+    <circle cx="22" cy="22" r="18" class="bg"></circle>
+    <circle cx="22" cy="22" r="18" class="progress"></circle>
+  </svg>
+  <span class="arrow"></span>
+</a>
+
+
+<script>
+const scrollBtn = document.getElementById("scrollBtn");
+const progressCircle = document.querySelector(".progress");
+const sections = document.querySelectorAll("section");
+
+const radius = 18;
+const circumference = 2 * Math.PI * radius;
+
+progressCircle.style.strokeDasharray = circumference;
+progressCircle.style.strokeDashoffset = circumference;
+
+function updateScroll(){
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = scrollTop / docHeight;
+
+  // update progress circle
+  progressCircle.style.strokeDashoffset =
+    circumference - (progress * circumference);
+
+  // arrow direction
+  if (scrollTop > 300) {
+    scrollBtn.classList.add("up");
+  } else {
+    scrollBtn.classList.remove("up");
   }
+}
 
-  .hero-sub {
-    font-size: 16px;
+// click behavior
+scrollBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (scrollBtn.classList.contains("up")) {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    let currentScroll = window.scrollY;
+
+    for (let i = 0; i < sections.length; i++) {
+      if (sections[i].offsetTop > currentScroll + 50) {
+        sections[i].scrollIntoView({ behavior: "smooth" });
+        break;
+      }
+    }
   }
+});
 
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
+window.addEventListener("scroll", updateScroll);
+window.addEventListener("load", updateScroll);
+</script>
 
-}
-  ================= */
+<!-- FOOTER -->
+<footer class="footer">
 
-/* FULL IMAGE 
+  <div class="footerMenu">
+    <a href="index.html">HOME</a>
+    <a href="about.html">COMPANY</a>
+    <a href="#services">OUR SERVICES</a>
+    <a href="#">NEWS</a>
+    <a href="#">JOIN US</a>
+    <a href="#contact">CONTACT US</a>
+  </div>
 
-.hero-full-img {
+  <div class="copyright">
+    Copyright &#169; 2026 株式会社グローバルイノベーション All Rights Reserved.
+  </div>
 
-  width: 100%;
-  margin-bottom: 40px;
-}
+</footer>
 
-.hero-full-img img {
+</body>
 
-  width: 100%;
-  height: auto;
-
-  display: block;
-}
-*/
-
-.hero {
-  position: relative;
-  width: 100%;
-  height: auto;    
-}
-
-.hero-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center 30%;
-}
-/* TAGLINE */
-
-.hero-bottom {
-  max-width: 700px;
-  margin: auto;
-  padding: 0 20px;
-  transform: translateY(-40px);
-}
-
-.tagline {
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 30px;
-  color: rgba(255,255,255,0.9);
-}
-
-/* HERO BUTTON */
-.btn-primary {
-  display: inline-block;
-  background: #ffffff;
-  color: #5c1414;
-  padding: 12px 32px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-  margin-top: 10px;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-/* ================= CONTACT ================= */
-.contact {
-  background: #f5f5f5;
-  scroll-margin-top: 100px;
-  padding: 50px 50px;
-}
-
-.contact-inner {
-  max-width: 500px;
-  margin: auto;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: #000000;
-}
-
-.contact-sub{
-  text-align: center;
-  font-size: 14px;
-  letter-spacing: 0px;
-  margin-bottom: 35px;
-  margin-top: -25px;
-  color:#625c5c;
-}
-
-/* FORM */
-.contact input,
-.contact textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-}
-
-.contact textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-/* BUTTON */
-.contact button {
-  background: #ad2222;
-  color: #fff;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size:15px;
-  margin-bottom: 40px;
-}
-
-.contact button:hover {
-  background: #3a0c0c;
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 768px) {
-  .nav {
-    display: none;
-  }
-
-  .hero-title {
-    font-size: 32px;
-  }
-
-  .tagline {
-    font-size: 16px;
-  }
-
-}
-/* HERO BUTTON */
-
-.hero-btn {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  display: inline-block;
-  padding: 8px 30px;
-  border: 2px solid white;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-}
-
-/* HOVER EFFECT*/
-
-.hero-btn:hover {
-  background: white;
-  color: #5c1414;
-  transform: translateY(-2px);
-}
-
-html
-{
-  scroll-behavior:smooth;
-}
-
-/* ================= TOP TO BOTTOM SCROLL ================= */
-.scroll-circle{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  width:44px;
-  height:44px;
-  border-radius:50%;  
-  z-index:9999;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  background:rgba(195, 128, 141, 0.7); /* dark glass */
-  backdrop-filter:blur(8px);
-  box-shadow:0 8px 20px rgba(0,0,0,0.25);
-  transition: all 0.25s ease;
-}
-
-/* SVG CIRCLES */
-.scroll-circle svg{
-  position:absolute;
-  transform:rotate(-90deg);
-  top:0;
-  left:0;
-  z-index:1; 
-}
-
-.scroll-circle circle{
-  fill:none;
-  stroke-width:2;
-}
-
-/* background ring */
-.scroll-circle .bg{
-  stroke:rgba(255,255,255,0.15);
-}
-
-/* progress ring */
-.scroll-circle .progress{
-  stroke:#7a1414;
-  stroke-dasharray:113; /* circumference */
-  stroke-dashoffset:113;
-  transition:stroke-dashoffset 0.2s ease;
-}
-
-/* arrow */
-.scroll-circle .arrow{
-  width:10px;
-  height:10px;
-  border-left:2px solid #f5c3c3;
-  border-bottom:2px solid #f5c3c3;
-  transform:rotate(-45deg);
-  transition:0.3s;
-  z-index:2;
-}
-
-/* when scrolled → arrow becomes UP */
-.scroll-circle.up .arrow{
-  transform:rotate(135deg);
-}
-
-/* hover */
-.scroll-circle:hover{
-  transform: translateY(-3px) scale(1.05);
-}
-
-@keyframes floatBtn {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-
-/* ================= FOOTER ================= */
-
-.footer {
-  background: #7a1414;
-  padding: 25px 20px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.footerMenu{
-  display: flex;
-  text-decoration: none;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  margin-bottom: 12px;
-  flex-wrap: wrap;  
-}
-
-.footerMenu a {
-  position: relative;
-  color: rgba(255,255,255,0.85);
-  text-decoration: none;
-  font-size: 13px;
-  letter-spacing: 0.5px;
-  transition: all 0.25s ease;
-}
-
-.footerMenu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.footerMenu a:visited {
-  color: #fff;
-}
-
-.footerMenu a:not(:last-child) {
-  margin-right: -10px;
-  padding-right: 10px;
-  border-right: 1px solid rgba(255,255,255,0.3);
-}
-
-.footerMenu a:hover{
- color: #fff;
-  transform: translateY(-2px);
-}
-
-/* ================= COPYRIGHT ================= */
-.copyright{
-  font-size:11px;
-  color:rgba(255,255,255,0.6);
-  border-top:1px solid rgba(255,255,255,0.1);
-  padding-top:15px;
-  margin-top:15px;
-}
-
-
-/* ================= ABOUT PAGE ================= */
-
-.about {
-  scroll-margin-top: 100px;
-}
-
-.about-inner {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-.about-title {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: -20px;
-  letter-spacing: 2px;
-}
-
-.about-sub{
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0px;
-  margin-bottom: 35px;
-  margin-top: 0px;
-  color:#625c5c;
-}
-
-.about-text {
-  text-align: center;
-  font-size: 15px;
-  line-height: 2;
-  color: #333;
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-
-/* ================= GREETINGS ================= */
-
-.greeting {
-  padding: 50px 20px 60px;
-  background: #f9f9f9;
-  text-align: center;
-}
-
-.greeting-title {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: -20px;
-  letter-spacing: 2px;
-}
-
-.greeting-sub{
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0px;
-  margin-bottom: 35px;
-  margin-top: 0px;
-  color:#625c5c;
-}
-
-.greeting-inner {
-  max-width: 1000px;
-  margin: 60px auto 0;
-  margin: bottom;
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  text-align: left;
-}
-
-.greeting-inner.reverse {
-  flex-direction: row-reverse;
-}
-
-/* name under photo */
-.greeting-name {
-  text-align: right;
-  margin-top: 30px;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-/* IMAGE */
-.greeting-img {
-  position: relative;
-  width: 320px;
-}
-
-.greeting-img img {
-  width: 320px;
-  height: 380px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  position:relative;
-  z-index: 1;
-}
-
-.greeting-img::before {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: -20px;
-  width: 320px;
-  height: 380px;
-  background: #772525;
-  border-radius: 12px;
-  z-index: 0;
-}
-
-/* TEXT */
-.greeting-text {
-  flex: 1;
-  align-items: center;
-}
-
-.greeting-text p {
-  font-size: 14px;
-  line-height: 2;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-/* SIGNATURE */
-.greeting-sign {
-  margin-top: 50px;
-  font-weight: 600;
-  text-align: right;
-}
-
-/* ================= PHILOSOPHY ================= */
-
-.philosophy {
-  padding: 30px 20px;
-  background: #ffffff;
-  text-align: center;
-}
-
-.philosophy-title {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: -20px;
-  letter-spacing: 2px;
-}
-
-.philosophy-sub{
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0px;
-  margin-bottom: -10px;
-  margin-top: 0px;
-  color:#625c5c;
-}
-
-.philosophy-inner {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.philosophy-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 35px 60px;
-  margin-top: 50px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  row-gap: 50px;    
-  column-gap: 60px; 
-}
-
-.philosophy-item {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  text-align: left;
-  min-height: 70px;
-}
-
-/* ICON */
-.philosophy-icon {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px; 
-  flex-shrink: 0;
-  font-size: 20px;
-
-  /* GLASS STYLE */
-  background: rgba(92, 20, 20, 0.08);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(92, 20, 20, 0.15);
-  color: #5c1414;
-  box-shadow:
-    0 8px 20px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-
-.philosophy-icon img {
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; 
-}
-
-.philosophy-item:hover .philosophy-icon {
-  transform: translateY(-6px) scale(1.05);
-  background: rgba(92, 20, 20, 0.15);
-  box-shadow:
-    0 15px 35px rgba(92,20,20,0.25);
-}
-
-.philosophy-item:nth-child(2) .philosophy-icon {
-  background: rgba(120, 40, 40, 0.08);
-}
-
-.philosophy-item:nth-child(3) .philosophy-icon {
-  background: rgba(92, 20, 20, 0.12);
-}
-
-/* ================= POLICY ================= */
-
-.policy {
-  padding: 30px 20px;
-  background: #f7f7f7;
-}
-
-.policy-title {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: -20px;
-  letter-spacing: 2px;
-}
-
-.policy-sub{
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0px;
-  margin-bottom: 35px;
-  margin-top: 0px;
-  color:#625c5c;
-}
-
-.policy-inner {
-  max-width: 900px;
-  margin: auto;
-}
-
-.policy-block {
-  margin-bottom: 35px;
-}
-
-.policy-block h3 {
-  font-size: 14px;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-/* BOX */
-.policy-box {
-  background: #eaeaea;
-  padding: 15px 20px;
-  border-radius: 6px;
-  font-size: 13px;
-  line-height: 1.8;
-  color: #333;
-  transition: 0.2s;
-}
-
-.policy-box:hover {
-  background: #e0e0e0;
-}
-
-/* ================= SECTION DIVIDER LINE ================= */
-
-.section-divider {
-  max-width: 1500px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(92,20,20,0.4),
-    transparent
-  );
-}
+</html>
