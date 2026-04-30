@@ -1,5 +1,3 @@
-/* ================= RESET ================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -345,7 +343,7 @@ a.promo:active {
 
 .services-title {
   text-align: center;
-  font-size: 32px;
+  font-size: 30px;
   margin-top: 30px;
   margin-bottom: -20px;
   letter-spacing: 2px;
@@ -781,7 +779,6 @@ html
   margin-top:15px;
 }
 
-
 /* ================= ABOUT PAGE ================= */
 
 .about {
@@ -796,7 +793,7 @@ html
 
 .about-title {
   text-align: center;
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: -20px;
   letter-spacing: 2px;
 }
@@ -829,7 +826,7 @@ html
 
 .greeting-title {
   text-align: center;
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: -20px;
   letter-spacing: 2px;
 }
@@ -925,7 +922,7 @@ html
 
 .philosophy-title {
   text-align: center;
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: -20px;
   letter-spacing: 2px;
 }
@@ -1020,7 +1017,7 @@ html
 
 .policy-title {
   text-align: center;
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: -20px;
   letter-spacing: 2px;
 }
@@ -1078,4 +1075,118 @@ html
     rgba(92,20,20,0.4),
     transparent
   );
+}
+
+/* ================= DISPATCH PAGE ================= */
+
+.dispatch {
+  scroll-margin-top: 100px;
+}
+
+.dispatch-inner {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.dispatch-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: -20px;
+  letter-spacing: 2px;
+}
+
+.dispatch-sub{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  margin-bottom: 35px;
+  margin-top: 0px;
+  color:#625c5c;
+}
+
+.dispatch-text {
+  text-align: center;
+  font-size: 15px;
+  line-height: 2;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* ================= PROGRAMMING LANGUAGE ================= */
+
+.language {
+  scroll-margin-top: 100px;
+}
+
+.language-inner {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.language-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: -20px;
+  letter-spacing: 2px;
+}
+
+.language-sub{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  margin-bottom: 35px;
+  margin-top: 0px;
+  color:#625c5c;
+}
+
+.language-text {
+  text-align: center;
+  font-size: 15px;
+  line-height: 2;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* ================= PRIVACY ================= */
+
+.privacy {
+  scroll-margin-top: 100px;
+}
+
+.privacy-inner {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.privacy-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: -20px;
+  letter-spacing: 2px;
+}
+
+.privacy-sub{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  margin-bottom: 35px;
+  margin-top: 0px;
+  color:#625c5c;
+}
+
+.privacy-text {
+  text-align: left;
+  font-size: 15px;
+  line-height: 2;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
